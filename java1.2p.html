@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Concepts</title>
+</head>
+<body>
+  <h1>JavaScript Concepts</h1>
+  
+  <p id="output"></p>
+
+  <script>
+    // Function to display text on the webpage
+    function displayText(message) {
+      const output = document.getElementById("output");
+      output.innerHTML += message + "<br>";
+    }
+
+    // Function to greet a person
+    function greet(name) {
+      return "Hello, " + name + "!";
+    }
+
+    // Function to calculate the square of a number
+    function square(number) {
+      return number * number;
+    }
+
+    // Using the functions
+    displayText("String methods:");
+    const text = "Hello, world!";
+    displayText("1. Length: " + text.length);
+    displayText("2. Uppercase: " + text.toUpperCase());
+    displayText("3. Lowercase: " + text.toLowerCase());
+    displayText("4. Substring: " + text.substring(0, 5));
+    displayText("5. Replace: " + text.replace("world", "universe"));
+
+    displayText("Number methods:");
+    const number = 42.5678;
+    displayText("1. Fixed Decimal: " + number.toFixed(2));
+    displayText("2. Exponential Notation: " + number.toExponential(3));
+    displayText("3. Precision: " + number.toPrecision(4));
+    displayText("4. Rounded: " + Math.round(number));
+    displayText("5. Square Root: " + Math.sqrt(number));
+
+    displayText("Array methods:");
+    const array = [1, 2, 3, "four", 5];
+    displayText("1. Length: " + array.length);
+    displayText("2. Join as String: " + array.join(", "));
+    displayText("3. Push: " + array.push(6));
+    displayText("4. Pop: " + array.pop());
+    displayText("5. Index of 'four': " + array.indexOf("four"));
+
+    displayText("Date methods:");
+    const now = new Date();
+    displayText("1. Current Date: " + now);
+    displayText("2. Day of the Week: " + now.getDay());
+    displayText("3. Full Year: " + now.getFullYear());
+    displayText("4. Hours: " + now.getHours());
+    displayText("5. Minutes: " + now.getMinutes());
+
+    // Using the greet function
+    const greeting = greet("Muskan");
+    displayText("Function methods:");
+    displayText("1. Function Name: " + greet.name);
+    displayText("2. Function String: " + greet.toString());
+
+    // Using the square function
+    const squaredNumber = square(5);
+    displayText("Square of 5: " + squaredNumber);
+  </script>
+</body>
+</html>
